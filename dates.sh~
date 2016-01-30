@@ -8,5 +8,5 @@ do
     touch "$fileName"
     git add "$fileName"
     git commit --date="$date" --author="example-user11" -m "$fileName"
-done <dates.txt
+done < dates.txt
 

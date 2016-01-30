@@ -7,6 +7,6 @@ do
     echo "Creating file... $fileName"
     touch "$fileName"
     git add "$fileName"
-    git commit --date="$date" --author="example-user11" -m "$fileName"
+    git commit --date="$date" --author="example-user11 <>" -m "$fileName"
 done < dates.txt
 
