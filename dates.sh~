@@ -2,11 +2,11 @@
 
 while read date
 do
-    fileName=`echo "$date" | tr " " "_"`
-    date="$date 14:00 2015 +0500"
-    echo "Creating file... $fileName"
-    touch "$fileName"
-    git add "$fileName"
-    git commit --date="$date" --author="example-user11" -m "$fileName"
+  echo "- $date -"
+  echo -n " " >> f
+  git add f
+  git commit --date="$date" -m "$date"
 done < dates.txt
+
+rm f
 
